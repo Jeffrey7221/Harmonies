@@ -1,5 +1,5 @@
 //
-//  PlaySoundsViewController.swift
+//  SoundsDefaultViewController.swift
 //  PitchPerfect
 //
 //  Created by Jeffrey Zhu on 9/11/18.
@@ -9,14 +9,14 @@
 import UIKit
 import AVFoundation
 
-class PlaySoundsViewController: UIViewController {
+class SoundsDefaultViewController: UIViewController {
     
     @IBOutlet weak var orgButton: UIButton!
     @IBOutlet weak var thirdButton: UIButton!
     @IBOutlet weak var fourthButton: UIButton!
     @IBOutlet weak var fifthButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
-    @IBOutlet weak var playButton: UIButton!
+
     
     
     var recordedAudioURL : URL!
@@ -39,7 +39,7 @@ class PlaySoundsViewController: UIViewController {
         case .fourth:
             playSound(pitch: 500)
         case .fifth:
-            playSound(pitch: -500)
+            playSound(pitch: 700)
         }
         
         configureUI(.playing)

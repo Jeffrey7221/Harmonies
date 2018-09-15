@@ -16,6 +16,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
+    @IBOutlet weak var switchLabel: UILabel!
+    @IBOutlet weak var switchVar: UISwitch!
+    
+    
+    
     
     
     override func viewDidLoad() {
@@ -60,19 +65,35 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         try! audioSession.setActive(false)
     }
     
+    @IBAction func switched(_ sender: Any) {
+        if(switchVar.isOn) {
+            switchLabel.text = "Default"
+        } else {
+            switchLabel.text = "Slider"
+        }
+
+    }
+    
+    
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        if(flag) {
-            performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
+        if(flag && switchVar.isOn) {
+            performSegue(withIdentifier: "soundsDefault", sender: audioRecorder.url)
+        } else if (flag && !switchVar.isOn) {
+            performSegue(withIdentifier: "soundsScale", sender: audioRecorder.url)
         } else {
             print("recording was no successful")
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "stopRecording") {
-            let playSoundsVC = segue.destination as! PlaySoundsViewController
+        if (segue.identifier == "soundsDefault") {
+            let soundsDefaultVC = segue.destination as! SoundsDefaultViewController
             let recordedAudioURL = sender as! URL
-            playSoundsVC.recordedAudioURL = recordedAudioURL
+            soundsDefaultVC.recordedAudioURL = recordedAudioURL
+        } else if (segue.identifier == "soundsScale") {
+            let soundsScaleVC = segue.destination as! SoundsScaleViewController
+            let recordedAudioURL = sender as! URL
+            soundsScaleVC.recordedAudioURL = recordedAudioURL
         }
     }
 }
