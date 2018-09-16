@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D1A62422149AD4E005B149C /* SoundsScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A62412149AD4E005B149C /* SoundsScaleViewController.swift */; };
-		4D78137621484F6F00DC7F07 /* SoundsDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78137521484F6F00DC7F07 /* SoundsDefaultViewController.swift */; };
-		4D78137821485B5C00DC7F07 /* SoundsDefaultViewController-Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78137721485B5C00DC7F07 /* SoundsDefaultViewController-Audio.swift */; };
-		4DDC90A92146FE6300AE6851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC90A82146FE6300AE6851 /* AppDelegate.swift */; };
-		4DDC90AB2146FE6300AE6851 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC90AA2146FE6300AE6851 /* RecordSoundsViewController.swift */; };
-		4DDC90AE2146FE6300AE6851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC90AC2146FE6300AE6851 /* Main.storyboard */; };
-		4DDC90B02146FE6500AE6851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC90AF2146FE6500AE6851 /* Assets.xcassets */; };
-		4DDC90B32146FE6500AE6851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC90B12146FE6500AE6851 /* LaunchScreen.storyboard */; };
+		4D5AFDEE214DE01A00A453A3 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC90AA2146FE6300AE6851 /* RecordSoundsViewController.swift */; };
+		4D5AFDEF214DE01A00A453A3 /* SoundsDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78137521484F6F00DC7F07 /* SoundsDefaultViewController.swift */; };
+		4D5AFDF0214DE01A00A453A3 /* SoundsScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1A62412149AD4E005B149C /* SoundsScaleViewController.swift */; };
+		4D5AFDF1214DE01A00A453A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC90A82146FE6300AE6851 /* AppDelegate.swift */; };
+		4D5AFDF2214DE01A00A453A3 /* SoundsDefaultViewController-Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78137721485B5C00DC7F07 /* SoundsDefaultViewController-Audio.swift */; };
+		4D5AFDF5214DE01A00A453A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC90B12146FE6500AE6851 /* LaunchScreen.storyboard */; };
+		4D5AFDF6214DE01A00A453A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC90AF2146FE6500AE6851 /* Assets.xcassets */; };
+		4D5AFDF7214DE01A00A453A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DDC90AC2146FE6300AE6851 /* Main.storyboard */; };
+		4D5AFDFF214DEB2C00A453A3 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5AFDFE214DEB2C00A453A3 /* AudioHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D1A62412149AD4E005B149C /* SoundsScaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsScaleViewController.swift; sourceTree = "<group>"; };
+		4D5AFDFB214DE01A00A453A3 /* Harmonies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Harmonies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D5AFDFE214DEB2C00A453A3 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
 		4D78137521484F6F00DC7F07 /* SoundsDefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsDefaultViewController.swift; sourceTree = "<group>"; };
 		4D78137721485B5C00DC7F07 /* SoundsDefaultViewController-Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SoundsDefaultViewController-Audio.swift"; path = "../../../../Downloads/SoundsDefaultViewController-Audio.swift"; sourceTree = "<group>"; };
-		4DDC90A52146FE6300AE6851 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DDC90A82146FE6300AE6851 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DDC90AA2146FE6300AE6851 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
 		4DDC90AD2146FE6300AE6851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,7 +33,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4DDC90A22146FE6200AE6851 /* Frameworks */ = {
+		4D5AFDF3214DE01A00A453A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,7 +46,7 @@
 		4DDC909C2146FE6200AE6851 = {
 			isa = PBXGroup;
 			children = (
-				4DDC90A72146FE6300AE6851 /* PitchPerfect */,
+				4DDC90A72146FE6300AE6851 /* Harmonies */,
 				4DDC90A62146FE6300AE6851 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +54,12 @@
 		4DDC90A62146FE6300AE6851 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4DDC90A52146FE6300AE6851 /* PitchPerfect.app */,
+				4D5AFDFB214DE01A00A453A3 /* Harmonies.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4DDC90A72146FE6300AE6851 /* PitchPerfect */ = {
+		4DDC90A72146FE6300AE6851 /* Harmonies */ = {
 			isa = PBXGroup;
 			children = (
 				4DDC90A82146FE6300AE6851 /* AppDelegate.swift */,
@@ -69,28 +71,29 @@
 				4DDC90AF2146FE6500AE6851 /* Assets.xcassets */,
 				4DDC90B12146FE6500AE6851 /* LaunchScreen.storyboard */,
 				4DDC90B42146FE6500AE6851 /* Info.plist */,
+				4D5AFDFE214DEB2C00A453A3 /* AudioHelper.swift */,
 			);
-			path = PitchPerfect;
+			path = Harmonies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4DDC90A42146FE6200AE6851 /* PitchPerfect */ = {
+		4D5AFDEC214DE01A00A453A3 /* Harmonies */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4DDC90B72146FE6500AE6851 /* Build configuration list for PBXNativeTarget "PitchPerfect" */;
+			buildConfigurationList = 4D5AFDF8214DE01A00A453A3 /* Build configuration list for PBXNativeTarget "Harmonies" */;
 			buildPhases = (
-				4DDC90A12146FE6200AE6851 /* Sources */,
-				4DDC90A22146FE6200AE6851 /* Frameworks */,
-				4DDC90A32146FE6200AE6851 /* Resources */,
+				4D5AFDED214DE01A00A453A3 /* Sources */,
+				4D5AFDF3214DE01A00A453A3 /* Frameworks */,
+				4D5AFDF4214DE01A00A453A3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PitchPerfect;
+			name = Harmonies;
 			productName = PitchPerfect;
-			productReference = 4DDC90A52146FE6300AE6851 /* PitchPerfect.app */;
+			productReference = 4D5AFDFB214DE01A00A453A3 /* Harmonies.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,13 +105,8 @@
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = JeffreyZhu;
-				TargetAttributes = {
-					4DDC90A42146FE6200AE6851 = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
-				};
 			};
-			buildConfigurationList = 4DDC90A02146FE6200AE6851 /* Build configuration list for PBXProject "PitchPerfect" */;
+			buildConfigurationList = 4DDC90A02146FE6200AE6851 /* Build configuration list for PBXProject "Harmonies" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,34 +119,35 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4DDC90A42146FE6200AE6851 /* PitchPerfect */,
+				4D5AFDEC214DE01A00A453A3 /* Harmonies */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4DDC90A32146FE6200AE6851 /* Resources */ = {
+		4D5AFDF4214DE01A00A453A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DDC90B32146FE6500AE6851 /* LaunchScreen.storyboard in Resources */,
-				4DDC90B02146FE6500AE6851 /* Assets.xcassets in Resources */,
-				4DDC90AE2146FE6300AE6851 /* Main.storyboard in Resources */,
+				4D5AFDF5214DE01A00A453A3 /* LaunchScreen.storyboard in Resources */,
+				4D5AFDF6214DE01A00A453A3 /* Assets.xcassets in Resources */,
+				4D5AFDF7214DE01A00A453A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4DDC90A12146FE6200AE6851 /* Sources */ = {
+		4D5AFDED214DE01A00A453A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DDC90AB2146FE6300AE6851 /* RecordSoundsViewController.swift in Sources */,
-				4D78137621484F6F00DC7F07 /* SoundsDefaultViewController.swift in Sources */,
-				4D1A62422149AD4E005B149C /* SoundsScaleViewController.swift in Sources */,
-				4DDC90A92146FE6300AE6851 /* AppDelegate.swift in Sources */,
-				4D78137821485B5C00DC7F07 /* SoundsDefaultViewController-Audio.swift in Sources */,
+				4D5AFDFF214DEB2C00A453A3 /* AudioHelper.swift in Sources */,
+				4D5AFDEE214DE01A00A453A3 /* RecordSoundsViewController.swift in Sources */,
+				4D5AFDEF214DE01A00A453A3 /* SoundsDefaultViewController.swift in Sources */,
+				4D5AFDF0214DE01A00A453A3 /* SoundsScaleViewController.swift in Sources */,
+				4D5AFDF1214DE01A00A453A3 /* AppDelegate.swift in Sources */,
+				4D5AFDF2214DE01A00A453A3 /* SoundsDefaultViewController-Audio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +173,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4D5AFDF9214DE01A00A453A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Harmonies/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = project.PitchPerfect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D5AFDFA214DE01A00A453A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Harmonies/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = project.PitchPerfect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4DDC90B52146FE6500AE6851 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -288,57 +321,23 @@
 			};
 			name = Release;
 		};
-		4DDC90B82146FE6500AE6851 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PitchPerfect/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = project.PitchPerfect;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4DDC90B92146FE6500AE6851 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PitchPerfect/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = project.PitchPerfect;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4DDC90A02146FE6200AE6851 /* Build configuration list for PBXProject "PitchPerfect" */ = {
+		4D5AFDF8214DE01A00A453A3 /* Build configuration list for PBXNativeTarget "Harmonies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4DDC90B52146FE6500AE6851 /* Debug */,
-				4DDC90B62146FE6500AE6851 /* Release */,
+				4D5AFDF9214DE01A00A453A3 /* Debug */,
+				4D5AFDFA214DE01A00A453A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4DDC90B72146FE6500AE6851 /* Build configuration list for PBXNativeTarget "PitchPerfect" */ = {
+		4DDC90A02146FE6200AE6851 /* Build configuration list for PBXProject "Harmonies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4DDC90B82146FE6500AE6851 /* Debug */,
-				4DDC90B92146FE6500AE6851 /* Release */,
+				4DDC90B52146FE6500AE6851 /* Debug */,
+				4DDC90B62146FE6500AE6851 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

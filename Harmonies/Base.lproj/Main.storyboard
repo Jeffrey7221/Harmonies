@@ -13,7 +13,7 @@
         <!--Record Sounds View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="Harmonies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
         <!--Sounds Default View Controller-->
         <scene sceneID="ZFa-Jf-bCe">
             <objects>
-                <viewController id="Lvh-ht-YX7" customClass="SoundsDefaultViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lvh-ht-YX7" customClass="SoundsDefaultViewController" customModule="Harmonies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SHy-0X-0s0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,7 +181,7 @@
         <!--Sounds Scale View Controller-->
         <scene sceneID="Kky-g3-szj">
             <objects>
-                <viewController id="70z-0i-cAd" customClass="SoundsScaleViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="70z-0i-cAd" customClass="SoundsScaleViewController" customModule="Harmonies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D5d-8J-Bvs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,30 +198,44 @@
                                     <action selector="scaleChanged:" destination="70z-0i-cAd" eventType="valueChanged" id="FhG-JG-hwL"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZn-Sr-24V">
-                                <rect key="frame" x="145.5" y="450" width="84" height="84"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwV-wZ-gwa" userLabel="PlayButton">
+                                <rect key="frame" x="142" y="362" width="90" height="90"/>
+                                <state key="normal" image="Play"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="70z-0i-cAd" eventType="touchUpInside" id="BeH-SA-bhW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZn-Sr-24V" userLabel="StopButton">
+                                <rect key="frame" x="145" y="481" width="84" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="Bog-fp-rgL"/>
                                     <constraint firstAttribute="width" constant="84" id="DlD-74-PTW"/>
                                 </constraints>
                                 <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="70z-0i-cAd" eventType="touchUpInside" id="Ng6-8p-oxb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97871412260000001" blue="0.9255382486" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="fx5-BJ-cHF" firstAttribute="top" secondItem="nT6-3E-fB6" secondAttribute="bottom" constant="40" id="Bpr-Ce-kKN"/>
+                            <constraint firstItem="uZn-Sr-24V" firstAttribute="top" secondItem="vwV-wZ-gwa" secondAttribute="bottom" constant="29" id="F9C-FV-l4F"/>
                             <constraint firstItem="fx5-BJ-cHF" firstAttribute="leading" secondItem="sBr-kz-AVL" secondAttribute="leading" constant="43" id="WYm-No-YQH"/>
                             <constraint firstItem="nT6-3E-fB6" firstAttribute="centerX" secondItem="sBr-kz-AVL" secondAttribute="centerX" id="buh-Rz-TwG"/>
                             <constraint firstItem="uZn-Sr-24V" firstAttribute="centerX" secondItem="sBr-kz-AVL" secondAttribute="centerX" id="fWn-QW-Zxy"/>
-                            <constraint firstItem="sBr-kz-AVL" firstAttribute="bottom" secondItem="uZn-Sr-24V" secondAttribute="bottom" constant="133" id="j0t-Fo-ZiY"/>
+                            <constraint firstItem="sBr-kz-AVL" firstAttribute="bottom" secondItem="uZn-Sr-24V" secondAttribute="bottom" constant="102" id="j0t-Fo-ZiY"/>
+                            <constraint firstItem="vwV-wZ-gwa" firstAttribute="centerX" secondItem="sBr-kz-AVL" secondAttribute="centerX" id="jMD-5R-T0M"/>
                             <constraint firstItem="nT6-3E-fB6" firstAttribute="top" secondItem="sBr-kz-AVL" secondAttribute="top" constant="125" id="nEG-Oz-F63"/>
                             <constraint firstItem="fx5-BJ-cHF" firstAttribute="centerX" secondItem="nT6-3E-fB6" secondAttribute="centerX" id="t1A-fY-6hC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sBr-kz-AVL"/>
                     </view>
                     <connections>
+                        <outlet property="playButton" destination="vwV-wZ-gwa" id="CnE-MU-26e"/>
                         <outlet property="scale" destination="fx5-BJ-cHF" id="4Xp-mC-rS0"/>
                         <outlet property="scaleLabel" destination="nT6-3E-fB6" id="RYO-65-uwk"/>
+                        <outlet property="stopButton" destination="uZn-Sr-24V" id="6qr-cN-3zg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DfJ-jZ-JoI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -252,6 +266,7 @@
         <image name="4th" width="90" height="90"/>
         <image name="5th" width="90" height="90"/>
         <image name="Org" width="90" height="90"/>
+        <image name="Play" width="90" height="90"/>
         <image name="RecordButton" width="155" height="155"/>
         <image name="Stop" width="155" height="155"/>
     </resources>

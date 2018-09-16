@@ -90,10 +90,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             let soundsDefaultVC = segue.destination as! SoundsDefaultViewController
             let recordedAudioURL = sender as! URL
             soundsDefaultVC.recordedAudioURL = recordedAudioURL
+//            AudioHelper.recordedAudioURL = recordedAudioURL
+//            AudioHelper.scaleOrDefault = "default"
+
         } else if (segue.identifier == "soundsScale") {
             let soundsScaleVC = segue.destination as! SoundsScaleViewController
             let recordedAudioURL = sender as! URL
             soundsScaleVC.recordedAudioURL = recordedAudioURL
+//            AudioHelper.recordedAudioURL = recordedAudioURL
+//            AudioHelper.scaleOrDefault = "default"
         }
     }
 }

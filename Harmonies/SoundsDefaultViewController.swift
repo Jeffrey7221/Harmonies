@@ -25,6 +25,7 @@ class SoundsDefaultViewController: UIViewController {
     var audioPlayerNode: AVAudioPlayerNode!
     var audioPlayerNode1: AVAudioPlayerNode!
     var stopTimer: Timer!
+    let audioHelper = AudioHelper()
     
     enum ButtonType: Int {
         case org = 0, third, fourth, fifth
@@ -46,16 +47,19 @@ class SoundsDefaultViewController: UIViewController {
     }
     
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
-        stopAudio()
+//        audioHelper.stopAudio()
+        configureUI(.notPlaying)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+//        AudioHelper.parent = self
         configureUI(.notPlaying)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        audioHelper.setupAudio()
         setupAudio()
         // Do any additional setup after loading the view.
     }
