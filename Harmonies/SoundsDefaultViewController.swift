@@ -20,10 +20,6 @@ class SoundsDefaultViewController: UIViewController {
     
     
     var recordedAudioURL : URL!
-    var audioFile:AVAudioFile!
-    var audioEngine:AVAudioEngine!
-    var audioPlayerNode: AVAudioPlayerNode!
-    var audioPlayerNode1: AVAudioPlayerNode!
     var stopTimer: Timer!
     let audioHelper = AudioHelper()
     
@@ -31,38 +27,59 @@ class SoundsDefaultViewController: UIViewController {
         case org = 0, third, fourth, fifth
     }
     
+    enum PlayingState { case playing, notPlaying }
+    
     @IBAction func playSoundForButton(_ sender: UIButton) {
         switch(ButtonType(rawValue: sender.tag)!) {
         case .org:
-            playSound()
+            audioHelper.playSound()
         case .third:
-            playSound(pitch: 400)
+            audioHelper.playSound(pitch: 400)
         case .fourth:
-            playSound(pitch: 500)
+            audioHelper.playSound(pitch: 500)
         case .fifth:
-            playSound(pitch: 700)
+            audioHelper.playSound(pitch: 700)
         }
         
         configureUI(.playing)
     }
     
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
-//        audioHelper.stopAudio()
-        configureUI(.notPlaying)
+        audioHelper.stopAudio()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        AudioHelper.parent = self
         configureUI(.notPlaying)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        audioHelper.setupAudio()
-        setupAudio()
+        audioHelper.setupAudio()
+        audioHelper.setViewController(parent: self)
+        
+//        setupAudio()
         // Do any additional setup after loading the view.
     }
+ 
+    // MARK: UI Functions
     
+    func configureUI(_ playState: PlayingState) {
+        switch(playState) {
+        case .playing:
+            setPlayButtonsEnabled(false)
+            stopButton.isEnabled = true
+        case .notPlaying:
+            setPlayButtonsEnabled(true)
+            stopButton.isEnabled = false
+        }
+    }
     
+    func setPlayButtonsEnabled(_ enabled: Bool) {
+        orgButton.isEnabled = enabled
+        thirdButton.isEnabled = enabled
+        fourthButton.isEnabled = enabled
+        fifthButton.isEnabled = enabled
+    }    
 }

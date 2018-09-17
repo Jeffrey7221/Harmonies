@@ -12,9 +12,12 @@ import AVFoundation
 
 class AudioHelper {
     
+    
+    
     static var scaleOrDefault: String!
     static var recordedAudioURL : URL!
-    static var parent: UIViewController!
+    var defaultViewController: SoundsDefaultViewController!
+    var scaleViewController: SoundsScaleViewController!
     var audioFile:AVAudioFile!
     var audioEngine:AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
@@ -36,14 +39,16 @@ class AudioHelper {
         static let AudioEngineError = "Audio Engine Error"
     }
     
-    // MARK: PlayingState (raw values correspond to sender tags)
-    
-    enum PlayingState { case playing, notPlaying }
-    
     
     // MARK: Audio Functions
     
+    func setViewController(parent:  SoundsDefaultViewController? = nil, otherParent: SoundsScaleViewController? = nil) {
+        defaultViewController = parent
+        scaleViewController = otherParent
+    }
+    
     func setupAudio() {
+        
         // initialize (recording) audio file
         do {
             audioFile = try AVAudioFile(forReading: AudioHelper.recordedAudioURL as URL)
@@ -112,6 +117,11 @@ class AudioHelper {
             stopTimer.invalidate()
         }
         
+        if(defaultViewController != nil) {
+            defaultViewController.configureUI(.notPlaying) }
+        if(scaleViewController != nil) {
+            scaleViewController.configureUI(.notPlaying) }
+        
         if let audioEngine = audioEngine {
             audioEngine.stop()
             audioEngine.reset()
@@ -133,7 +143,9 @@ class AudioHelper {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: Alerts.DismissAlert, style: .default, handler: nil))
         if(AudioHelper.scaleOrDefault == "default") {
-            SoundsDefaultViewController().present(alert, animated: true, completion: nil)
+            defaultViewController.present(alert, animated: true, completion: nil)
+        }  else if(AudioHelper.scaleOrDefault == "scale") {
+            scaleViewController.present(alert, animated: true, completion: nil)
         }
     }
 }

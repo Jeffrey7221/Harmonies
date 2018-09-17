@@ -87,18 +87,18 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "soundsDefault") {
-            let soundsDefaultVC = segue.destination as! SoundsDefaultViewController
+//            let soundsDefaultVC = segue.destination as! SoundsDefaultViewController
             let recordedAudioURL = sender as! URL
-            soundsDefaultVC.recordedAudioURL = recordedAudioURL
-//            AudioHelper.recordedAudioURL = recordedAudioURL
-//            AudioHelper.scaleOrDefault = "default"
+//            soundsDefaultVC.recordedAudioURL = recordedAudioURL
+            AudioHelper.recordedAudioURL = recordedAudioURL
+            AudioHelper.scaleOrDefault = "default"
 
         } else if (segue.identifier == "soundsScale") {
-            let soundsScaleVC = segue.destination as! SoundsScaleViewController
+//            let soundsScaleVC = segue.destination as! SoundsScaleViewController
             let recordedAudioURL = sender as! URL
-            soundsScaleVC.recordedAudioURL = recordedAudioURL
-//            AudioHelper.recordedAudioURL = recordedAudioURL
-//            AudioHelper.scaleOrDefault = "default"
+//            soundsScaleVC.recordedAudioURL = recordedAudioURL
+            AudioHelper.recordedAudioURL = recordedAudioURL
+            AudioHelper.scaleOrDefault = "scale"
         }
     }
 }
